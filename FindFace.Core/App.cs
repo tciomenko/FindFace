@@ -1,14 +1,21 @@
 using Cirrious.CrossCore;
 using FindFace.Core.Services;
+using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform.IoC;
 
 namespace FindFace.Core
 {
-    public class App : MvvmCross.Core.ViewModels.MvxApplication
+    public class App : MvxApplication
     {
+        public App()
+        {
+            //Mvx.LazyConstructAndRegisterSingleton<IDataService, DataService>();
+        }
+
+
         public override void Initialize()
         {
-            Mvx.LazyConstructAndRegisterSingleton<IDataService, DataService>();
+            base.Initialize();
         }
     }
 }

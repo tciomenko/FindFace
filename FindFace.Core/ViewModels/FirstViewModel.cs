@@ -26,7 +26,7 @@ namespace FindFace.Core.ViewModels
 
         public  async Task LoadAsync()
         {
-            var getWeather = await dataService.GetDataFromService();
+            var getWeather = await dataService.SendPost(); //GetDataFromService();
         }
         public async override void Start()
         {

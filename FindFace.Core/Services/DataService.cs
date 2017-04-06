@@ -10,44 +10,71 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
 using System.Net.Http;
+using System.Threading;
+using Chance.MvvmCross.Plugins.UserInteraction;
+using MvvmCross.Binding.ExtensionMethods;
+
 
 namespace FindFace.Core.Services
 {
     public class DataService : IDataService
-    {       const string Key = "_RgCyr6NtSaLFnqrzC40bUkHxgIU8KNS";
-            const string WeatherCoordinatesUri = "http://api.findface.pro/v0/detect/?";
-            string result = "";
+    {
+         string Key = "_RgCyr6NtSaLFnqrzC40bUkHxgIU8KNS";
+       public HttpClient client = new HttpClient();
 
+        public DataService(string key= "_RgCyr6NtSaLFnqrzC40bUkHxgIU8KNS")
+        {
+            this.Key = key;
+        }
+        public async Task<RootOject> SendPost()
+        {
+            HttpClient client = new HttpClient();
+            HttpRequestMessage request = new HttpRequestMessage();
+            request.RequestUri = new Uri("https://api.findface.pro/v0/identify/?");
+            request.Method = HttpMethod.Post;
+            var identify = new Identify();
+            // сериализация объекта с помощью Json.NET
+            string json2 = JsonConvert.SerializeObject(identify);
+            request.Headers.Add("Accept", "application/json");
+            request.Headers.Add("Authorization", "Token _RgCyr6NtSaLFnqrzC40bUkHxgIU8KNS");
+
+            RootOject data = new RootOject();
+            HttpResponseMessage response = await client.SendAsync(request);
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                HttpContent responseContent =new StringContent(json2); ;
+                var json = await responseContent.ReadAsStringAsync();
+                data = JsonConvert.DeserializeObject<RootOject>(json);
+            }
+            return data;
+        }
         public async Task<FaceResponse> GetDataFromService()
         {
+            var url = "https://api.findface.pro/v0/galleries/?";
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Authorization", "token: " + Key);
             
-          using (var client = new HttpClient())
+            var response = await client.GetAsync(url);
+            response = response;
+            FaceResponse data = new FaceResponse();
+            try
             {
-                var url = "https://api.findface.pro/v0/detect?photo=http://static.findface.pro/sample.jpg";
-                client.DefaultRequestHeaders.Authorization=new AuthenticationHeaderValue("Authorization", "toket " + Key);
-                client.DefaultRequestHeaders.Host = "api.findface.pro";
-                
-                var response = await client.GetAsync(url);
-                FaceResponse data = null;
-                try
+                if (response != null)
                 {
-                    if (response != null)
-                    {
-                        
-                        string json = response.Content.ReadAsStringAsync().Result;
-                        data = JsonConvert.DeserializeObject<FaceResponse>(json);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Debug.WriteLine(ex.Message, ex.StackTrace);
-                }
 
-                return data;
-
+                    string json = response.Content.ReadAsStringAsync().Result;
+                    data = JsonConvert.DeserializeObject<FaceResponse>(json);
+                }
             }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message, ex.StackTrace);
+            }
+
+            return data;
+
+
         }
 
-        
+
     }
 }
