@@ -7,9 +7,9 @@ using Newtonsoft.Json;
 
 namespace FindFace.Core.Model
 {
-   public class ListFace
+   public class RootObject
     {
-        [JsonProperty("faces")]
-        public List<ConfidenceFace> Faces { get; set; }
+        [JsonProperty("results")]
+        public Results Results { get; set; }
     }
 }

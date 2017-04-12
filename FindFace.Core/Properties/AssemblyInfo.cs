@@ -1,30 +1,26 @@
-﻿using System.Resources;
-using System.Reflection;
+﻿using System.Reflection;
 using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 
-// Общие сведения об этой сборке предоставляются следующим набором
-// набором атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
-// связанные с этой сборкой.
+// Information about this assembly is defined by the following attributes. 
+// Change them to the values specific to your project.
+
 [assembly: AssemblyTitle("FindFace.Core")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("FindFace.Core")]
-[assembly: AssemblyCopyright("©  2017")]
+[assembly: AssemblyProduct("")]
+[assembly: AssemblyCopyright("gloriumtech")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: NeutralResourcesLanguage("ru")]
 
-// Сведения о версии сборки состоят из следующих четырех значений:
-//
-//      Основной номер версии
-//      Дополнительный номер версии
-//   Номер сборки
-//      Редакция
-//
-// Можно задать все значения или принять номер сборки и номер редакции по умолчанию.
-// указав "*", как показано ниже:
-// [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+// The assembly version has the format "{Major}.{Minor}.{Build}.{Revision}".
+// The form "{Major}.{Minor}.*" will automatically update the build and revision,
+// and "{Major}.{Minor}.{Build}.*" will update just the revision.
+
+[assembly: AssemblyVersion("1.0.*")]
+
+// The following attributes are used to specify the signing key for the assembly, 
+// if desired. See the Mono documentation for more information about signing.
+
+//[assembly: AssemblyDelaySign(false)]
+//[assembly: AssemblyKeyFile("")]

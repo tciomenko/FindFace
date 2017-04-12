@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace FindFace.Core.Model
 {
-   public class RootOject
+    public class Results
     {
-        public ConfidenceFaceResult results { get; set; }
+        public List<ConfidenceFace> ConfidenceFaces { get; set; }
     }
 }

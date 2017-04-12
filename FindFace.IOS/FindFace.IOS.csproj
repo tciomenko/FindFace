@@ -131,7 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FindFace.Core\FindFace.Core.csproj">
-      <Project>{79004c37-e432-4e0b-a465-49a8d6360102}</Project>
+      <Project>{45601A68-3249-40DA-B827-C9D971208F84}</Project>
       <Name>FindFace.Core</Name>
     </ProjectReference>
   </ItemGroup>

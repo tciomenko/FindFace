@@ -9,8 +9,7 @@ namespace FindFace.Core.Services
 {
    public interface IDataService
     {
-        Task<FaceResponse> GetDataFromService();
-        Task<RootOject> SendPost();
+        Task<ConfidenceFace> SendPost();
 
     }
 }

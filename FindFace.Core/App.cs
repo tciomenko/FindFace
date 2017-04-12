@@ -1,7 +1,6 @@
-using Cirrious.CrossCore;
 using FindFace.Core.Services;
 using MvvmCross.Core.ViewModels;
-using MvvmCross.Platform.IoC;
+using MvvmCross.Platform;
 
 namespace FindFace.Core
 {
@@ -9,7 +8,7 @@ namespace FindFace.Core
     {
         public App()
         {
-            //Mvx.LazyConstructAndRegisterSingleton<IDataService, DataService>();
+            Mvx.LazyConstructAndRegisterSingleton<IDataService, DataService>();
         }
 
 

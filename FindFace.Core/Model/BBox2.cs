@@ -3,14 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace FindFace.Core.Model
 {
     public class Bbox2
     {
-        public int x1 { get; set; }
-        public int x2 { get; set; }
-        public int y1 { get; set; }
-        public int y2 { get; set; }
+        [JsonProperty("x1")]
+        public int X1 { get; set; }
+        [JsonProperty("x2")]
+        public int X2 { get; set; }
+        [JsonProperty("y1")]
+        public int Y1 { get; set; }
+        [JsonProperty("y2")]
+        public int Y2 { get; set; }
+
     }
 }

@@ -3,21 +3,33 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace FindFace.Core.Model
 {
     public class Face
     {
-        public List<string> galleries { get; set; }
-        public int id { get; set; }
-        public string meta { get; set; }
-        public string photo { get; set; }
-        public string photo_hash { get; set; }
-        public string thumbnail { get; set; }
-        public string timestamp { get; set; }
-        public int x1 { get; set; }
-        public int x2 { get; set; }
-        public int y1 { get; set; }
-        public int y2 { get; set; }
+        [JsonProperty("galleries")]
+        public List<string> Galleries { get; set; }
+        [JsonProperty("id")]
+        public int Id { get; set; }
+        [JsonProperty("meta")]
+        public string Meta { get; set; }
+        [JsonProperty("photo")]
+        public string Photo { get; set; }
+        [JsonProperty("photo_hash")]
+        public string PhotoHash { get; set; }
+        [JsonProperty("thumbnail")]
+        public string Thumbnail { get; set; }
+        [JsonProperty("timestamp")]
+        public string Timestamp { get; set; }
+        [JsonProperty("x1")]
+        public int X1 { get; set; }
+        [JsonProperty("x2")]
+        public int X2 { get; set; }
+        [JsonProperty("y1")]
+        public int Y1 { get; set; }
+        [JsonProperty("y2")]
+        public int Y2 { get; set; }
     }
 }
