@@ -94,6 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\All.cs" />
+    <Compile Include="Model\FindFace.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\FirstViewModel.cs" />
     <Compile Include="Model\BBox2.cs" />

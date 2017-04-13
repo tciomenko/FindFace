@@ -21,7 +21,10 @@
     <ConsolePause>false</ConsolePause>
     <MtouchArch>x86_64</MtouchArch>
     <MtouchLink>None</MtouchLink>
-    <MtouchDebug>true</MtouchDebug>
+    <MtouchDebug>True</MtouchDebug>
+    <IOSDebugOverWiFi>False</IOSDebugOverWiFi>
+    <IOSDebuggerPort>10000</IOSDebuggerPort>
+    <CodesignKey>iPhone Developer: tciomenko@gmail.com (L5NXZA9545)</CodesignKey>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -90,8 +93,15 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Setup.cs" />
-    <Compile Include="Views\FirstView.cs" />
-    <Compile Include="Views\FirstView.designer.cs" />
+    <Compile Include="Views\FindFaceTableViewCell.cs" />
+    <Compile Include="Views\FindFaceTableViewCell.designer.cs">
+      <DependentUpon>FindFaceTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FindFaceTableViewSource.cs" />
+    <Compile Include="Views\FindFaceViewController.cs" />
+    <Compile Include="Views\FindFaceViewController.designer.cs">
+      <DependentUpon>FindFaceViewController.cs</DependentUpon>
+    </Compile>
     <Content Include="AppDelegate.cs.txt" />
     <Content Include="ToDo-MvvmCross\_ iOS UI.txt" />
     <None Include="GettingStarted.Xamarin" />
@@ -100,7 +110,8 @@
     <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
     <Content Include="Entitlements.plist" />
     <None Include="packages.config" />
-    <InterfaceDefinition Include="Views\FirstView.xib" />
+    <InterfaceDefinition Include="Views\FindFaceTableViewCell.xib" />
+    <InterfaceDefinition Include="Views\FindFaceViewController.xib" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MvvmCross.Binding, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">

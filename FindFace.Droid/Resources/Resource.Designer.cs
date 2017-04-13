@@ -111,9 +111,6 @@ namespace FindFace.Droid
 			// aapt resource value: 0x7f040001
 			public const int MvxBindingTagUnique = 2130968577;
 			
-			// aapt resource value: 0x7f040002
-			public const int imageView1 = 2130968578;
-			
 			static Id()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -132,9 +129,6 @@ namespace FindFace.Droid
 			
 			// aapt resource value: 0x7f030001
 			public const int SplashScreen = 2130903041;
-			
-			// aapt resource value: 0x7f030002
-			public const int View_FindFace = 2130903042;
 			
 			static Layout()
 			{

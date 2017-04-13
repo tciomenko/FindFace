@@ -2,6 +2,7 @@ using MvvmCross.Core.ViewModels;
 using System.ComponentModel;
 using FindFace.Core.Services;
 using System.Threading.Tasks;
+using FindFace.Core.Model;
 
 namespace FindFace.Core.ViewModels
 {
@@ -9,11 +10,11 @@ namespace FindFace.Core.ViewModels
         : MvxViewModel, INotifyPropertyChanged
     {
         readonly IDataService dataService;
-
+        public MvxObservableCollection<Face> CurrentFindFace { get; set; }
         public FirstViewModel(IDataService dataService)
         {
             this.dataService = dataService;
-
+            CurrentFindFace = new MvxObservableCollection<Face>();
         }
 
         public async Task LoadAsync()

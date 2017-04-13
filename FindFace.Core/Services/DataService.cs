@@ -19,7 +19,7 @@ namespace FindFace.Core.Services
         public HttpClient Сlient = new HttpClient();
 
 
-        public async Task<ConfidenceFace> SendPost()
+        public async Task<List<ConfidenceFace>> SendPost()
         {
             var identify = new Identify();
 
@@ -37,7 +37,7 @@ namespace FindFace.Core.Services
                             "https://api.findface.pro/v0/identify/?photo=http://static.findface.pro/sample.jpg", content)
                         .ConfigureAwait(false);
                 ;
-                ConfidenceFace data = new ConfidenceFace();
+                var data = new List<ConfidenceFace>();
 
                 if (response.StatusCode == HttpStatusCode.OK)
                 {
