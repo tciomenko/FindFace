@@ -1,7 +1,6 @@
-using MvvmCross.Platform;
-using MvvmCross.Platform.Plugins;
+using Cirrious.CrossCore.Plugins;
 
-namespace FindFace.Core.Bootstrap
+namespace FindFace.IOS.Bootstrap
 {
     public class UserInteractionPluginBootstrap
         : MvxLoaderPluginBootstrapAction<Chance.MvvmCross.Plugins.UserInteraction.PluginLoader, Chance.MvvmCross.Plugins.UserInteraction.Touch.Plugin>

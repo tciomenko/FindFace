@@ -111,7 +111,6 @@
     <Compile Include="Services\IDataService.cs" />
     <Compile Include="Services\ProgressStringContent.cs" />
     <Compile Include="App.cs" />
-    <Compile Include="Bootstrap\UserInteractionPluginBootstrap.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

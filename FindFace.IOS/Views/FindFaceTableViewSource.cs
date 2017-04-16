@@ -17,6 +17,7 @@ namespace FindFace.IOS.Views
 
         protected override UITableViewCell GetOrCreateCellFor(UITableView tableView, NSIndexPath indexPath, object item)
         {
+
             var findFaceViewCell = tableView.DequeueReusableCell(FindFaceTableViewCell.Key, indexPath) as FindFaceTableViewCell;
             return findFaceViewCell;
         }

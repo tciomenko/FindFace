@@ -19,7 +19,7 @@ namespace FindFace.Core.Services
         public HttpClient Сlient = new HttpClient();
 
 
-        public async Task<List<ConfidenceFace>> SendPost()
+        public async Task<List<ConfidenceFace>> GetDataFromService()
         {
             var identify = new Identify();
 
@@ -56,6 +56,7 @@ namespace FindFace.Core.Services
             ;
         }
 
+        
         //public async Task<FaceResponse> GetDataFromService()
         //{
         //    var url = "https://api.findface.pro/v0/galleries/?";

@@ -24,12 +24,25 @@ namespace FindFace.IOS.Views
 
             InitializeBindings();
         }
+        //public override void ViewWillTransitionToSize(CoreGraphics.CGSize toSize, IUIViewControllerTransitionCoordinator coordinator)
+        //{
+        //    FindFaceTableView.ReloadData();
+        //}
+
+        //private void CheckOrientation()
+        //{
+        //    if (UIDevice.CurrentDevice.Orientation.IsLandscape())
+        //        findFaceTableViewSource.HideView = false;
+        //    else
+        //        findFaceTableViewSource.HideView = true;
+        //    FindFaceTableView.ReloadData();
+        //}
         private void InitializeBindings()
         {
             var bindingSet = this.CreateBindingSet<FindFaceViewController, FirstViewModel>();
             bindingSet.Bind(findFaceTableViewSource).To(vm => vm.CurrentFindFace);
             bindingSet.Apply();
-            FindFaceTableView.ReloadData();
+            //CheckOrientation();
         }
     }
 }

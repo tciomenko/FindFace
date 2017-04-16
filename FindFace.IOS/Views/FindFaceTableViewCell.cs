@@ -1,5 +1,7 @@
 ﻿using System;
-
+using System.Collections.Generic;
+using System.Linq;
+using FindFace.Core.Model;
 using Foundation;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.iOS.Views;
@@ -23,10 +25,10 @@ namespace FindFace.IOS.Views
             imageLoader = new MvxImageViewLoader(() => FindFaceImageView);
             this.DelayBind(() =>
             {
-                var bindingSet = this.CreateBindingSet<FindFaceTableViewCell, Core.Model.ConfidenceFace>();
+                var bindingSet = this.CreateBindingSet<FindFaceTableViewCell, List<ConfidenceFace>> ();
 
-                bindingSet.Bind(imageLoader).To(vm => vm.Face.Photo);
-                bindingSet.Bind(imageLoader).For(i => i.DefaultImagePath).To(vm => vm.Face.Photo);
+                bindingSet.Bind(imageLoader).To(vm => vm[0].Face.Photo);
+                bindingSet.Bind(imageLoader).For(i => i.DefaultImagePath).To(vm => vm[0].Face.Photo);
                 bindingSet.Apply();
             });
         }
