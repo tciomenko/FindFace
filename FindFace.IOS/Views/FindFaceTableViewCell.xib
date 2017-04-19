@@ -14,12 +14,19 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="2" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                        <rect key="frame" x="0.0" y="0.0" width="237" height="96"/>
+                        <rect key="frame" x="0.0" y="0.0" width="135" height="96"/>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="11" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                        <rect key="frame" x="158" y="7" width="87" height="30"/>
+                        <state key="normal" title="TakePhoto">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
                 </subviews>
             </tableViewCellContentView>
             <connections>
                 <outlet property="FindFaceImageView" destination="2" id="name-outlet-2"/>
+                <outlet property="takePhotoBtn" destination="11" id="name-outlet-11"/>
             </connections>
         </tableViewCell>
     </objects>

@@ -4,6 +4,8 @@ using MvvmCross.Binding.iOS.Views;
 using MvvmCross.iOS.Views;
 using UIKit;
 using MvvmCross.Binding.BindingContext;
+using Plugin.Media;
+using Plugin.Media.Abstractions;
 
 namespace FindFace.IOS.Views
 {
@@ -11,7 +13,7 @@ namespace FindFace.IOS.Views
     {
         private FindFaceTableViewSource findFaceTableViewSource;
         public FindFaceViewController() : base("FindFaceViewController", null){}
-
+        
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
@@ -21,7 +23,23 @@ namespace FindFace.IOS.Views
             FindFaceTableView.Source = findFaceTableViewSource;
             FindFaceTableView.EstimatedRowHeight = 90f;
             FindFaceTableView.RowHeight = UITableView.AutomaticDimension;
+            TakePhoto.TouchDown += async (o, e) =>
+            {
+                if (CrossMedia.Current.IsCameraAvailable && CrossMedia.Current.IsTakePhotoSupported)
+                {
+                    MediaFile file = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
+                    {
+                        SaveToAlbum = true,
+                        Directory = "Sample",
+                        Name = $"{DateTime.Now.ToString("dd.MM.yyyy_hh.mm.ss")}.jpg"
+                    });
 
+                    if (file == null)
+                        return;
+
+                    img.Image = UIImage.FromFile(file.Path);
+                }
+            };
             InitializeBindings();
         }
         //public override void ViewWillTransitionToSize(CoreGraphics.CGSize toSize, IUIViewControllerTransitionCoordinator coordinator)

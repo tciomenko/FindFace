@@ -13,6 +13,6 @@ namespace FindFace.Core.Model
         [JsonProperty("n")]
         public int N { get; set; } = 10;
         [JsonProperty("photo")]
-        public string Photo { get; set; } = "http://static.findface.pro/sample.jpg";
+        public string Photo { get; set; } = "https://st.kp.yandex.net/images/actor_iphone/iphone360_20866.jpg";
     }
 }

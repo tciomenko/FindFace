@@ -17,11 +17,20 @@ namespace FindFace.IOS.Views
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIImageView FindFaceImageView { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton takePhotoBtn { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
             if (FindFaceImageView != null) {
                 FindFaceImageView.Dispose ();
                 FindFaceImageView = null;
+            }
+
+            if (takePhotoBtn != null) {
+                takePhotoBtn.Dispose ();
+                takePhotoBtn = null;
             }
         }
     }

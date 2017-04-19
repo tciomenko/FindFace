@@ -15,9 +15,12 @@ namespace FindFace.IOS.Views
         public static readonly UINib Nib;
 
         private readonly MvxImageViewLoader imageLoader;
+
+
         static FindFaceTableViewCell()
         {
             Nib = UINib.FromName("FindFaceTableViewCell", NSBundle.MainBundle);
+
         }
         
         protected FindFaceTableViewCell(IntPtr handle) : base(handle)
