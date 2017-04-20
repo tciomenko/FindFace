@@ -4,8 +4,6 @@
 <dict>
 	<key>CFBundleDisplayName</key>
 	<string>FindFace.IOS</string>
-	<key>CFBundleIdentifier</key>
-	<string>com.companyname.FindFace.IOS</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
@@ -43,5 +41,7 @@
 	<string>New Entry</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>New Entry</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.xamarin-gorgeous.FindFace-IOS</string>
 </dict>
 </plist>

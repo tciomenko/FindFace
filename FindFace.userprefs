@@ -1,0 +1,21 @@
+﻿<Properties StartupConfiguration="{21F58D9A-AC65-4EB9-9AF7-05FCFCE9C86D}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FindFace.Core/Services/DataService.cs">
+    <Files>
+      <File FileName="FindFace.Core/Services/DataService.cs" Line="35" Column="13" />
+      <File FileName="FindFace.IOS/Views/FirstView.cs" Line="18" Column="1" />
+      <File FileName="FindFace.IOS/Main.cs" Line="12" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/gloriumtech/Downloads/FindFace/FindFace.Core/ViewModels/FirstViewModel.cs" relfile="FindFace.Core/ViewModels/FirstViewModel.cs" line="22" column="1" />
+      <Breakpoint file="/Users/gloriumtech/Downloads/FindFace/FindFace.Core/Services/DataService.cs" relfile="FindFace.Core/Services/DataService.cs" line="22" column="1" />
+      <Breakpoint file="/Users/gloriumtech/Downloads/FindFace/FindFace.Core/Services/DataService.cs" relfile="FindFace.Core/Services/DataService.cs" line="43" column="59" />
+      <Breakpoint file="/Users/gloriumtech/Downloads/FindFace/FindFace.Core/Services/DataService.cs" relfile="FindFace.Core/Services/DataService.cs" line="38" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.FindFace.IOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.E179863A-5CE6-426A-8411-2C6ED3C7BDA8" />
+</Properties>
