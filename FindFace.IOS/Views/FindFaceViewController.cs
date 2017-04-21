@@ -12,6 +12,7 @@ namespace FindFace.IOS.Views
     public partial class FindFaceViewController : MvxViewController<FirstViewModel>
     {
         private FindFaceTableViewSource findFaceTableViewSource;
+        
         public FindFaceViewController() : base("FindFaceViewController", null){}
         
         public override void ViewDidLoad()
@@ -31,17 +32,19 @@ namespace FindFace.IOS.Views
                     {
                         SaveToAlbum = true,
                         Directory = "Sample",
-                        Name = $"{DateTime.Now.ToString("dd.MM.yyyy_hh.mm.ss")}.jpg"
+                        Name =$"{DateTime.Now.ToString("dd.MM.yyyy_hh.mm.ss")}.jpg"
                     });
 
                     if (file == null)
                         return;
 
                     img.Image = UIImage.FromFile(file.Path);
+
                 }
             };
             InitializeBindings();
         }
+
         //public override void ViewWillTransitionToSize(CoreGraphics.CGSize toSize, IUIViewControllerTransitionCoordinator coordinator)
         //{
         //    FindFaceTableView.ReloadData();

@@ -32,6 +32,7 @@ namespace FindFace.IOS.Views
 
                 bindingSet.Bind(imageLoader).To(vm => vm[0].Face.Photo);
                 bindingSet.Bind(imageLoader).For(i => i.DefaultImagePath).To(vm => vm[0].Face.Photo);
+                
                 bindingSet.Apply();
             });
         }

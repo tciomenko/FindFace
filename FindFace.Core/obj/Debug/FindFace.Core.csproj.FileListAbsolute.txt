@@ -28,17 +28,3 @@ C:\Users\tciomenko\AppData\Roaming\Skype\My Skype Received Files\FindFace\FindFa
 C:\Users\tciomenko\AppData\Roaming\Skype\My Skype Received Files\FindFace\FindFace\FindFace.Core\bin\Debug\FindFace.Core.dll.mdb
 C:\Users\tciomenko\AppData\Roaming\Skype\My Skype Received Files\FindFace\FindFace\FindFace.Core\obj\Debug\FindFace.Core.dll.mdb
 C:\Users\tciomenko\AppData\Roaming\Skype\My Skype Received Files\FindFace\FindFace\FindFace.Core\bin\Debug\FindFace.Core.dll.mdb
-C:\Users\tciomenko\AppData\Roaming\Skype\My Skype Received Files\FindFace\FindFace\FindFace.Core\obj\Debug\FindFace.Core.dll.mdb
-C:\Users\tciomenko\AppData\Roaming\Skype\My Skype Received Files\FindFace\FindFace\FindFace.Core\bin\Debug\FindFace.Core.dll.mdb
-C:\Users\tciomenko\AppData\Roaming\Skype\My Skype Received Files\FindFace\FindFace\FindFace.Core\obj\Debug\FindFace.Core.dll.mdb
-C:\Users\tciomenko\AppData\Roaming\Skype\My Skype Received Files\FindFace\FindFace\FindFace.Core\bin\Debug\FindFace.Core.dll.mdb
-C:\Users\tciomenko\AppData\Roaming\Skype\My Skype Received Files\FindFace\FindFace\FindFace.Core\obj\Debug\FindFace.Core.dll.mdb
-C:\Users\tciomenko\AppData\Roaming\Skype\My Skype Received Files\FindFace\FindFace\FindFace.Core\bin\Debug\FindFace.Core.dll.mdb
-C:\Users\tciomenko\AppData\Roaming\Skype\My Skype Received Files\FindFace\FindFace\FindFace.Core\obj\Debug\FindFace.Core.dll.mdb
-C:\Users\tciomenko\AppData\Roaming\Skype\My Skype Received Files\FindFace\FindFace\FindFace.Core\bin\Debug\FindFace.Core.dll.mdb
-C:\Users\tciomenko\AppData\Roaming\Skype\My Skype Received Files\FindFace\FindFace\FindFace.Core\obj\Debug\FindFace.Core.dll.mdb
-C:\Users\tciomenko\AppData\Roaming\Skype\My Skype Received Files\FindFace\FindFace\FindFace.Core\bin\Debug\FindFace.Core.dll.mdb
-C:\Users\tciomenko\AppData\Roaming\Skype\My Skype Received Files\FindFace\FindFace\FindFace.Core\obj\Debug\FindFace.Core.dll.mdb
-C:\Users\tciomenko\AppData\Roaming\Skype\My Skype Received Files\FindFace\FindFace\FindFace.Core\bin\Debug\FindFace.Core.dll.mdb
-C:\Users\tciomenko\AppData\Roaming\Skype\My Skype Received Files\FindFace\FindFace\FindFace.Core\obj\Debug\FindFace.Core.dll.mdb
-C:\Users\tciomenko\AppData\Roaming\Skype\My Skype Received Files\FindFace\FindFace\FindFace.Core\bin\Debug\FindFace.Core.dll.mdb

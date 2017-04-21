@@ -14,38 +14,43 @@ namespace FindFace.Core.ViewModels
     public class FirstViewModel
         : MvxViewModel, INotifyPropertyChanged
     {
-
         readonly IDataService dataService;
         public MvxObservableCollection<List<ConfidenceFace>> CurrentFindFace { get; set; }
+        
         public FirstViewModel(IDataService dataService)
         {
             this.dataService = dataService;
             CurrentFindFace = new MvxObservableCollection<List<ConfidenceFace>>();
-
         }
+
+       
 
         public async Task LoadAsync()
         {
-            try { 
-            var getFindFace = await dataService.GetDataFromService();
-            if (getFindFace != null)
+            try
             {
-                CurrentFindFace.Add(getFindFace);
-            }
-            else
-            {
-                var result = await Mvx.Resolve<IUserInteraction>().ConfirmAsync("Cant get weather. Please try again later", "Warning");
-                if (result)
+                var getFindFace = await dataService.GetDataFromService();
+                if (getFindFace != null)
                 {
-                    await LoadAsync();
+                    CurrentFindFace.Add(getFindFace);
+                }
+                else
+                {
+                    var result =
+                        await Mvx.Resolve<IUserInteraction>()
+                            .ConfirmAsync("Cant get weather. Please try again later", "Warning");
+                    if (result)
+                    {
+                        await LoadAsync();
+                    }
                 }
             }
-        }
             catch (Exception ex)
             {
                 Debug.WriteLine(ex.Message, ex.StackTrace);
             }
-}
+        }
+
         public async override void Start()
         {
             base.Start();
