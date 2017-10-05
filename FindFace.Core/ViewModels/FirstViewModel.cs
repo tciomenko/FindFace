@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using FindFace.Core.Services;
 using System.Threading.Tasks;
-using Chance.MvvmCross.Plugins.UserInteraction;
+//using Chance.MvvmCross.Plugins.UserInteraction;
 using FindFace.Core.Model;
 using MvvmCross.Platform;
 using System.Collections.Generic;
@@ -36,13 +36,14 @@ namespace FindFace.Core.ViewModels
                 }
                 else
                 {
-                    var result =
-                        await Mvx.Resolve<IUserInteraction>()
-                            .ConfirmAsync("Cant get weather. Please try again later", "Warning");
-                    if (result)
-                    {
-                        await LoadAsync();
-                    }
+                    //var result =
+                    //    await Mvx.Resolve<IUserInteraction>()
+                    //        .ConfirmAsync("Cant get weather. Please try again later", "Warning");
+                    //if (result)
+                    //{
+                    //    await LoadAsync();
+                    //}
+
                 }
             }
             catch (Exception ex)

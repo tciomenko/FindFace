@@ -8,9 +8,7 @@ using FindFace.Core.Model;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Net.Mime;
-using Foundation;
-using MvvmCross.Binding.Binders;
+
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Plugin.Media;
@@ -24,7 +22,6 @@ namespace FindFace.Core.Services
         public HttpClient Client = new HttpClient();
         public static string PhotoPath;
         private const string apiBase = "https://api.findface.pro/v0/";
-        private NSUrlSession syncSession = null;
 
         //public async Task<List<ConfidenceFace>> GetDataFromService()
         //{
